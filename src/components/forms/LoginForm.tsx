@@ -103,14 +103,16 @@ export const LoginForm = ({
 						</Form>
 					</Card>
 				</Col>
-				<Col span={12} className='promo_col'>
-					<Image
-						src={promo}
-						alt='promo'
-						fill
-						style={{ objectFit: 'cover' }}
-						priority
-					/>
+				<Col xs={0} sm={0} md={0} lg={12} xl={12} className='promo_col'>
+					<div className='promo_img_wrapper'>
+						<Image
+							src={promo}
+							alt='promo'
+							fill
+							style={{ objectFit: 'cover' }}
+							priority
+						/>
+					</div>
 				</Col>
 			</Row>
 		</Spin>
