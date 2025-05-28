@@ -1,5 +1,7 @@
+import { AuthPage } from '@/features/auth/AuthPage'
+
 const Page = () => {
-	return <div>AUTH Page</div>
+	return <AuthPage />
 }
 
 export default Page

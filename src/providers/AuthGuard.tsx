@@ -11,7 +11,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
 		if (user === null) {
 			router.replace('/auth')
 		} else {
-			router.replace('/auth')
+			router.replace('/')
 		}
 	}, [user, router])
 
