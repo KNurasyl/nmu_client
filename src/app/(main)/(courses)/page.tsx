@@ -1,5 +1,7 @@
+import CourseList from '@/features/course/CourseList'
+
 const Page = () => {
-	return <div>Courses list</div>
+	return <CourseList />
 }
 
 export default Page

@@ -1,3 +1,8 @@
 @use 'base/reset';
-@use 'components/auth';
-@use 'components/mainLayout';
+@use 'components/forms/auth';
+@use 'components/layouts/mainLayout';
+@use 'components/cards/courseCard';
+@use 'components/cards/lessonCard';
+@use 'components/course/courseList';
+@use 'components/lesson/lessonList';
+@use 'components/lesson/lessonPromo';

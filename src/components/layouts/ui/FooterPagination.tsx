@@ -12,11 +12,14 @@ import { Dropdown, MenuProps } from 'antd'
 import { Footer } from 'antd/es/layout/layout'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { useCallback } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { toast } from 'react-toastify'
 
 const FooterPagination = () => {
+	const [hide, setHide] = useState(false)
+	const lastScrollY = useRef(0)
+
 	const { t, i18n } = useTranslation('common')
 	const pathname = usePathname()
 	const router = useRouter()
@@ -37,6 +40,24 @@ const FooterPagination = () => {
 		},
 		[i18n, router, setUser, t]
 	)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentY = window.scrollY
+
+			if (currentY > lastScrollY.current && currentY > 40) {
+				// скроллим вниз — прячем
+				setHide(true)
+			} else if (currentY < lastScrollY.current) {
+				// скроллим вверх — показываем
+				setHide(false)
+			}
+			lastScrollY.current = currentY
+		}
+
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [])
 
 	const navItems = [
 		{
@@ -73,7 +94,7 @@ const FooterPagination = () => {
 	]
 
 	return (
-		<Footer className='footer_mobile'>
+		<Footer className={`footer_mobile${hide ? ' footer--hidden' : ''}`}>
 			{navItems.map(item =>
 				item.type === 'link' ? (
 					<Link
@@ -88,7 +109,7 @@ const FooterPagination = () => {
 					<Dropdown
 						key={item.key}
 						menu={{ items: menuItems, onClick: handleMenuClick }}
-						placement='topCenter'
+						placement='top'
 						arrow
 						trigger={['click']}
 					>
