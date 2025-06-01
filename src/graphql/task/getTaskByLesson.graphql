@@ -1,9 +1,0 @@
-query GetTasksByLesson($lessonId: String!) {
-	getTasksByLesson(lessonId: $lessonId) {
-		_id
-		data
-		description
-		lessonCode
-		type
-	}
-}
