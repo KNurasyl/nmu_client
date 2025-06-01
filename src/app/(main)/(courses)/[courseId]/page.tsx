@@ -5,7 +5,9 @@ interface IProps {
 }
 
 const Page = async ({ params }: IProps) => {
-	return <LessonList courseId={params.courseId} />
+	const { courseId } = await params
+
+	return <LessonList courseId={courseId} />
 }
 
 export default Page

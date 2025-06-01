@@ -10,6 +10,7 @@ interface IProps {
 	thumbnail: string
 	description?: string | null
 	progress: number
+	onClick: VoidFunction
 }
 
 const LessonCard = ({
@@ -17,11 +18,13 @@ const LessonCard = ({
 	thumbnail,
 	description,
 	progress,
+	onClick
 }: IProps) => {
 	return (
 		<Card
 			hoverable
 			className='lesson_card'
+			onClick={onClick}
 			cover={
 				<div className='lesson_card__image-wrapper'>
 					<Image

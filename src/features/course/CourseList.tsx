@@ -27,7 +27,7 @@ const CourseList = () => {
 						title={course.course.courseName}
 						description={course?.course?.description}
 						progress={0}
-						onClick={() => router.push(`/lessons/${course.course._id}`)}
+						onClick={() => router.push(`/${course.course._id}`)}
 					/>
 				))}
 			</div>
