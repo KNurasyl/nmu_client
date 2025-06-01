@@ -41,13 +41,21 @@ const LessonList = ({ courseId }: IProps) => {
 
 	return (
 		<Spin spinning={loading}>
+			<LessonPromo
+				courseName={course?.courseName}
+				description={course?.description}
+				progress={0}
+			/>
 			<div className='lesson_list'>
-				<LessonPromo
-					courseName={course?.courseName}
-					description={course?.description}
-					progress={0}
-				/>
-
+				{lessons?.map(lesson => (
+					<LessonCard
+						key={lesson._id}
+						lessonName={lesson.lessonName}
+						description={lesson.description}
+						thumbnail={thumbnail}
+						progress={0}
+					/>
+				))}
 			</div>
 		</Spin>
 	)

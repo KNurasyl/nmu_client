@@ -75,7 +75,7 @@ export const HeaderPagination = () => {
 				menu={{ items, onClick: handleMenuClick }}
 				placement='bottomLeft'
 				icon={<UserOutlined />}
-				style={{ width: '150px' }}
+				style={{ width: '122px' }}
 			>
 				{user?.userName}
 			</Dropdown.Button>
