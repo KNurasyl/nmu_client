@@ -6,5 +6,9 @@
 	"logout": "Шығу",
 	"language_switched": "Тіл қазақ тіліне ауыстырылды",
 	"courses": "Курстар",
-	"settings": "Параметрлер"
+	"settings": "Параметрлер",
+	"inProgress": "Орындалуда",
+	"completed": "Аяқталды",
+	"noDesc": "Сипаттама жоқ",
+	"task": "тапсырма"
 }

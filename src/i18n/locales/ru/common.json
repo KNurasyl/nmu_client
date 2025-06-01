@@ -6,5 +6,9 @@
 	"logout": "Выйти",
 	"language_switched": "Язык переключен на русский",
 	"courses": "Курсы",
-	"settings": "Параметрлер"
+	"settings": "Настройки",
+	"inProgress": "В процесее",
+	"completed": "Завершено",
+	"noDesc": "Нет описания",
+	"task": "задание"
 }

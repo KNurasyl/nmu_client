@@ -3,6 +3,9 @@
 @use 'components/layouts/mainLayout';
 @use 'components/cards/courseCard';
 @use 'components/cards/lessonCard';
+@use 'components/cards/taskCard';
 @use 'components/course/courseList';
 @use 'components/lesson/lessonList';
 @use 'components/lesson/lessonPromo';
+@use 'components/lesson/lessonPage';
+@use 'components/videoPlayer/lessonVideoPlayer';
