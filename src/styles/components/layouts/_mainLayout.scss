@@ -21,6 +21,7 @@
 
 	.main_content {
 		padding: 10px 15px;
+		// height: calc(100vh - 64px);
 	}
 
 	.footer_mobile {
@@ -34,12 +35,12 @@
 		height: 64px;
 		background: #f7f9fc;
 		box-shadow: 0 -2px 14px 0 rgba(30, 60, 120, 0.07);
-		z-index: 1000;
 		border-radius: 18px 18px 0 0;
 		user-select: none;
 		padding: 0 8px;
 		transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s;
 		will-change: transform;
+		z-index: 100;
 
 		& .footer--hidden {
 			transform: translateY(110%);

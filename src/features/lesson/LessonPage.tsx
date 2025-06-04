@@ -1,7 +1,7 @@
 'use client'
 
 import TaskCard from '@/components/cards/TaskCard'
-import LessonVideoPlayer from '@/components/videoPlayer/LessonVideoPlayer'
+import LessonVideoPlayer from '@/components/player/LessonVideoPlayer'
 import { GetLessonByIdQuery } from '@/graphql/generated/graphql'
 import { GET_LESSON_BY_ID } from '@/graphql/lesson'
 import { useQuery } from '@apollo/client'
